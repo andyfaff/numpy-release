@@ -151,6 +151,7 @@ jobs:
         env:
           CIBW_BUILD: ${{ matrix.python }}-${{ matrix.buildplat[1] }}
           SRC: ${{ github.workspace }}/numpy-src
+          CIBW_ARCHS_MACOS: "x86_64"
         with:
            package-dir: numpy-src
            output-dir: dist
